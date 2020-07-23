@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<form>
+		<!-- N1:<input type="text" id="number 1" style="margin-bottom: 3px" onchange="validate()"> -->
+		<table>
+			<tr>
+				<td>N1:<input type="text" id="number 1" onchange="validate()"></td>
+				<td><p id="val1" style="color: maroon"></p></td>
+			</tr>
+		</table>
+		<p id="val1"></p>
+		<br />
+		<!--N2:<input type="text" id="number 2" style="margin-bottom: 3px" onchange="validate()"> -->
+		<table>
+			<tr>
+				<td>N2:<input type="text" id="number 2" style="margin-bottom: 3px" onchange="validate()"></td>
+				<td><p id="val2" style="color: maroon"></p></td>
+			</tr>
+		</table>
+		<br />
+		<!--<input id="num1"> -->
+		<p>Result</p>
+		<p id="answer"></p>
+		<p id="check"></p>
+		<button type="button" onclick="add()">Addition</button>
+		<button type="button" onclick="sub()">Substraction</button>
+		<button type="button" onclick="mul()">Multiplication</button>
+		<button type="button" onclick="div()">Division</button>
+		<!--<button type="button" onchange="validate()">Validate</button> -->
+	</form>
+	<script type="text/javascript">
+		function add(){
+			 A=document.getElementById("number 1").value;
+			 B=document.getElementById("number 2").value;
+			document.getElementById("answer").innerHTML=Number(A)+Number(B);
+		}
+		function sub(){
+			A=document.getElementById("number 1").value;
+			B=document.getElementById("number 2").value;
+			document.getElementById("answer").innerHTML=A-B;
+		}
+		function mul(){
+			A=document.getElementById("number 1").value;
+			B=document.getElementById("number 2").value;
+			document.getElementById("answer").innerHTML=A*B;
+		}
+		function div(){
+			A=document.getElementById("number 1").value;
+			B=document.getElementById("number 2").value;
+			document.getElementById("answer").innerHTML=A/B
+		}
+		function validate(){
+			var i=document.getElementById("number 1").value;
+			console.log(i);
+			var j=document.getElementById("number 2").value;
+			console.log(j);
+
+			if (!Number(i)  && !Number(j)) {
+				alert("not valid");
+				document.getElementById("val1").innerHTML="not valid"
+			}
+			else{
+				document.getElementById("")
+			}
+
+			//if (isNaN(i)) {
+			//	text="Input is not valid"
+			//}
+			//else{
+			//	text="valid input"
+			//}
+			//document.getElementById("check").innerHTML=text;
+		}
+
+	</script>
+
+</body>
+</html>

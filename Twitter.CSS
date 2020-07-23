@@ -1,0 +1,12 @@
+.leftside, .rightside{
+	height:100%
+	width:100%
+}
+
+.leftside{
+	background-color: skyblue;
+}
+
+.rightside{
+	background-color: :ivory;
+}

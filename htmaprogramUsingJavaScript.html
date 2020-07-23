@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Less Than More Than</title>
+</head>
+<body>
+	<button onclick="LessThan30()">More Than 30</button>
+	<button onclick="MoreThan83()">Less Than 83</button>
+	<button onclick="ShowAll()">Show All</button>
+	<table id="tab">
+		<tr>
+			<td>ID</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>83</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>23</td>
+		</tr>
+		
+	</table>
+	<script>
+		var t=document.getElementByiId("tab")
+
+		function LessThan30()
+		{
+			for (var x = 0; x <= t.rows.length; x++) {
+				if (Number(t.rows[x].cells[1].innerHTML)<30) {
+					document.getElementByiId("tab").rows[x].style.display="none"
+				}
+			}
+		}
+		function MoreThan83()
+		{
+			for(var x =0; x <= t.rows.length;x++){
+				if(Number(t.rows[x].cells[1].innerHTML)>83)
+				{
+					document.getElementByiId("tab").rows[x].style.display="none"
+				}
+			}
+		}
+		function ShowAll(){
+			for(var x =0; x <= t.rows.length;x++){
+				if (Number(t.rows[x].cells[1].innerHTML)) {
+					document.getElementByiId("tab").rows[x].style.display=""
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
